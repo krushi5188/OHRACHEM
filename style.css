@@ -15,7 +15,7 @@
     --calc-bg: #E0E8E9;
 }
 
-/* --- GEOMETRY & TYPOGRAPHY --- */
+/* --- RESET & TYPOGRAPHY --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
@@ -29,9 +29,12 @@ body {
     min-height: 100vh; 
 }
 
-/* --- [FIXED] LINK & LIST RESET --- */
-/* This was missing! It fixes the purple links. */
-a { text-decoration: none; color: inherit; transition: 0.3s; }
+/* --- GLOBAL LINK RESET (Force-Override) --- */
+a { 
+    text-decoration: none !important; 
+    color: inherit; 
+    transition: 0.3s; 
+}
 ul { list-style: none; }
 
 h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
@@ -39,7 +42,7 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
 /* --- GLOBAL CANVAS RULES --- */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* GEOMETRY: Squared corners (No Circles) */
+/* GEOMETRY: Squared corners */
 .btn { 
     display: inline-block; 
     padding: 14px 32px; 
@@ -52,38 +55,69 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
     border: 2px solid var(--text); 
     transition: 0.3s;
 }
-
 .btn-primary { background-color: var(--primary); color: var(--white); border-color: var(--primary); }
 .btn-primary:hover { background-color: var(--text); color: var(--white); border-color: var(--text); }
 
 .btn-secondary { background-color: transparent; color: var(--text); margin-left: 10px; }
 .btn-secondary:hover { background-color: var(--text); color: var(--white); }
 
-/* --- HEADER --- */
+.badge { display: inline-block; background-color: var(--text); color: var(--white); padding: 4px 12px; font-size: 0.7rem; font-weight: 700; border-radius: 50px; margin-bottom: 20px; }
+
+/* --- HEADER (Specific Overrides) --- */
 header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 100; }
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
+
+/* Force Logo Color */
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    letter-spacing: -0.5px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    color: var(--text) !important; 
+}
 .logo img { height: 45px; width: auto; } 
+
+/* Force Nav Link Colors */
 .nav-links { display: flex; gap: 30px; font-weight: 600; font-size: 0.9rem; }
-.nav-links a:hover { color: var(--primary); }
+.nav-links a { color: var(--text) !important; }
+.nav-links a:hover { color: var(--primary) !important; }
 .active { border-bottom: 2px solid var(--primary); }
 
-/* --- SECTIONS --- */
+/* --- HERO --- */
 .hero { padding: 100px 0; flex: 1; display: flex; align-items: center; }
 .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
 .hero span { color: var(--primary); }
 .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 40px; }
 
+/* --- SECTIONS --- */
 .section-pad { padding: 80px 0; }
 .bg-white { background-color: var(--white); }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.bg-dark { background-color: var(--text); color: var(--white); }
+.bg-dark h2, .bg-dark h3, .bg-dark p { color: var(--white); }
 
-/* --- TABLES --- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+
+/* --- CARDS & INDUSTRIES (New Layouts) --- */
+.card { padding: 30px; background-color: var(--bg); border: 1px solid var(--border); border-radius: 4px; transition: 0.3s; }
+.card:hover { border-color: var(--primary); transform: translateY(-5px); }
+.card-icon { font-size: 2rem; margin-bottom: 15px; display: block; }
+.card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.card p { font-size: 0.9rem; opacity: 0.8; }
+
+.stat-item { padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+.stat-item:last-child { border-right: none; }
+.stat-item h3 { font-size: 2rem; color: var(--primary); margin-bottom: 5px; }
+.stat-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+
+/* --- TABLES & CHARTS --- */
 .data-table { width: 100%; border-collapse: collapse; background: var(--white); }
 .data-table th, .data-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); text-align: left; }
 .data-table th { background-color: var(--text); color: var(--white); font-weight: 600; }
 
-/* --- CHARTS & CALCULATOR --- */
 .chart-container { display: flex; align-items: flex-end; gap: 40px; margin-top: 40px; height: 300px; border-bottom: 2px solid var(--text); }
 .bar { width: 100%; border-radius: 4px 4px 0 0; position: relative; }
 .bar-ohra { height: 280px; background-color: var(--primary); }
@@ -92,16 +126,17 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .calc-section { background-color: var(--calc-bg); padding: 40px; border-radius: 4px; border: 1px solid var(--text); }
 .input-group select, .input-group input { width: 100%; padding: 12px; border: 1px solid var(--text); border-radius: 4px; }
 
-/* --- FOOTER --- */
+/* --- FOOTER & WHATSAPP --- */
 footer { padding: 60px 0; background-color: var(--text); color: var(--white); margin-top: auto; }
 footer a { color: var(--primary); font-weight: 700; }
 .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
 
-/* --- WHATSAPP --- */
 .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .grid-2 { grid-template-columns: 1fr; }
     .nav-links { display: none; }
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
 }
