@@ -101,7 +101,7 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
 
-/* --- CARDS & INDUSTRIES (New Layouts) --- */
+/* --- CARDS & INDUSTRIES --- */
 .card { padding: 30px; background-color: var(--bg); border: 1px solid var(--border); border-radius: 4px; transition: 0.3s; }
 .card:hover { border-color: var(--primary); transform: translateY(-5px); }
 .card-icon { font-size: 2rem; margin-bottom: 15px; display: block; }
@@ -113,13 +113,31 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .stat-item h3 { font-size: 2rem; color: var(--primary); margin-bottom: 5px; }
 .stat-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
 
-/* --- TABLES & CHARTS --- */
-.data-table { width: 100%; border-collapse: collapse; background: var(--white); }
+/* --- TABLES & CHARTS (UPDATED) --- */
+.data-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: var(--bg); /* CHANGED: Matches background color now */
+}
 .data-table th, .data-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); text-align: left; }
 .data-table th { background-color: var(--text); color: var(--white); font-weight: 600; }
 
 .chart-container { display: flex; align-items: flex-end; gap: 40px; margin-top: 40px; height: 300px; border-bottom: 2px solid var(--text); }
-.bar { width: 100%; border-radius: 4px 4px 0 0; position: relative; }
+
+/* UPDATED BAR STYLING */
+.bar { 
+    width: 100%; 
+    border-radius: 4px 4px 0 0; 
+    position: relative;
+    /* Centering text inside the bar */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15px;
+    color: var(--bg); /* Cloud White text color */
+    font-weight: 700;
+    font-size: 1.1rem;
+}
 .bar-ohra { height: 280px; background-color: var(--primary); }
 .bar-competitor { height: 140px; background-color: #ccc; }
 
