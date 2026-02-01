@@ -1,32 +1,61 @@
-/* --- VARIABLES --- */
+/* --- ASTRO-NUMERICAL TECHNICAL SPECS --- */
 :root {
-    --primary: #9CAF66;      /* Venus Sage */
-    --text: #2F3E33;         /* Midnight Green */
-    --bg: #F4F5F0;           /* Cloud White */
+    /* MERCURY: Primary Actions & Trade */
+    --primary: #3A7D80;      
+    
+    /* VENUS: Structure, Success & Destiny */
+    --text: #1A2C2F;         
+    
+    /* MARS: Core Self & Background Stability */
+    --bg: #F4F5F0;           
+    
     --white: #ffffff;
-    --border: rgba(47, 62, 51, 0.15);
+    --border: rgba(26, 44, 47, 0.15); /* Venusian Structural Border */
     --whatsapp: #25D366;
-    --calc-bg: #E8EBE0;
+    --calc-bg: #E0E8E9;
 }
 
-/* --- RESET & TYPOGRAPHY --- */
+/* --- GEOMETRY & TYPOGRAPHY --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; min-height: 100vh; }
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-ul { list-style: none; }
-h1, h2, h3 { font-weight: 800; letter-spacing: -0.5px; }
 
-/* --- UTILITY --- */
+body { 
+    font-family: 'Inter', sans-serif; /* Geometric Sans-Serif */
+    background-color: var(--bg); 
+    color: var(--text); 
+    line-height: 1.6; 
+    -webkit-font-smoothing: antialiased; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
+
+/* --- GLOBAL CANVAS RULES --- */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.btn { display: inline-block; padding: 14px 32px; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; cursor: pointer; border: 2px solid var(--text); margin-top: 10px; }
-.btn-primary { background-color: var(--text); color: var(--primary); }
-.btn-primary:hover { background-color: transparent; color: var(--text); }
+
+/* GEOMETRY: Squared corners (No Circles) */
+.btn { 
+    display: inline-block; 
+    padding: 14px 32px; 
+    border-radius: 4px; /* Minimal Radius Only */
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    font-size: 0.85rem; 
+    cursor: pointer; 
+    border: 2px solid var(--text); 
+    transition: 0.3s;
+}
+
+.btn-primary { background-color: var(--primary); color: var(--white); border-color: var(--primary); }
+.btn-primary:hover { background-color: var(--text); color: var(--white); border-color: var(--text); }
+
 .btn-secondary { background-color: transparent; color: var(--text); margin-left: 10px; }
 .btn-secondary:hover { background-color: var(--text); color: var(--white); }
-.badge { display: inline-block; background-color: var(--text); color: var(--white); padding: 4px 12px; font-size: 0.7rem; font-weight: 700; border-radius: 50px; margin-bottom: 20px; }
 
-/* --- HEADER --- */
-header { background-color: var(--bg); padding: 20px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+/* --- HEADER (MARS GROUNDING) --- */
+header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 100; }
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
 .logo img { height: 45px; width: auto; } 
@@ -35,47 +64,36 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 1px solid 
 .active { border-bottom: 2px solid var(--primary); }
 
 /* --- SECTIONS --- */
-.hero { padding: 100px 0; border-bottom: 1px solid var(--border); flex: 1; display: flex; align-items: center; }
-.hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; max-width: 800px; }
+.hero { padding: 100px 0; flex: 1; display: flex; align-items: center; }
+.hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
 .hero span { color: var(--primary); }
-.hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 40px; opacity: 0.9; }
+.hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 40px; }
 
 .section-pad { padding: 80px 0; }
 .bg-white { background-color: var(--white); }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 
-/* --- TABLES & SPECS --- */
-.data-table { width: 100%; border-collapse: collapse; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+/* --- TABLES (VENUSIAN DISCIPLINE) --- */
+.data-table { width: 100%; border-collapse: collapse; background: var(--white); }
 .data-table th, .data-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); text-align: left; }
 .data-table th { background-color: var(--text); color: var(--white); font-weight: 600; }
-.dark-table { width: 100%; border: 1px solid var(--border); border-collapse: collapse; }
-.dark-table th { background-color: var(--text); color: var(--primary); padding: 15px; text-align: left; }
-.dark-table td { padding: 15px; border-bottom: 1px solid var(--border); color: var(--text); }
 
-/* --- BENCHMARK CHART --- */
-.chart-container { display: flex; align-items: flex-end; gap: 40px; margin-top: 40px; height: 300px; padding-bottom: 20px; border-bottom: 2px solid var(--border); }
-.chart-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; text-align: center; }
+/* --- CHARTS & CALCULATOR --- */
+.chart-container { display: flex; align-items: flex-end; gap: 40px; margin-top: 40px; height: 300px; border-bottom: 2px solid var(--text); }
 .bar { width: 100%; border-radius: 4px 4px 0 0; position: relative; }
-.bar span { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: 700; font-size: 1.1rem; }
-.bar-competitor { height: 140px; background-color: #ccc; } 
 .bar-ohra { height: 280px; background-color: var(--primary); }
+.bar-competitor { height: 140px; background-color: #ccc; }
 
-/* --- CALCULATOR --- */
-.calc-section { background-color: var(--calc-bg); padding: 40px; border-radius: 8px; margin-top: 40px; border: 1px solid var(--border); }
-.calc-flex { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end; }
-.input-group { flex: 1; min-width: 200px; }
-.input-group label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 8px; }
-.input-group select, .input-group input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; }
-.calc-btn { background-color: var(--text); color: var(--primary); border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: 700; height: 50px; }
-.calc-result { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.1); display: none; }
-.result-box { display: flex; gap: 40px; }
-.res-item strong { display: block; font-size: 1.5rem; }
+.calc-section { background-color: var(--calc-bg); padding: 40px; border-radius: 4px; border: 1px solid var(--text); }
+.input-group select, .input-group input { width: 100%; padding: 12px; border: 1px solid var(--text); border-radius: 4px; }
 
-/* --- FOOTER & WHATSAPP --- */
-footer { padding: 60px 0; border-top: 1px solid var(--border); font-size: 0.9rem; background-color: var(--bg); margin-top: auto; }
+/* --- FOOTER (VENUS ANCHOR) --- */
+footer { padding: 60px 0; background-color: var(--text); color: var(--white); margin-top: auto; }
+footer a { color: var(--primary); font-weight: 700; }
 .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
-.whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); z-index: 1000; }
-.whatsapp-float:hover { transform: translateY(-5px); }
+
+/* --- WHATSAPP (MERCURY VIBRATION) --- */
+.whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
