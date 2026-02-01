@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra-Bond™ Product Specs | OHRA Chem</title>
+    <title>Terra-Bond™ Specs | OHRA Chem</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -28,12 +28,12 @@
         <div class="container">
             <span class="badge">HS CODE: 3824.99.00</span>
             <h1>TERRA-BOND™ <span>GREEN</span></h1>
-            <p>A premium, micro-activated hydrocolloid tackifier designed for heavy-duty erosion control. 100% Biodegradable.</p>
+            <p>Premium micro-activated hydrocolloid tackifier for industrial erosion control. Batch OH-2601-EXP.</p>
 
             <div class="grid-2" style="margin-top:60px;">
                 <div>
-                    <h3>Superior Performance</h3>
-                    <p>Our activated complex delivers >3000 cps viscosity, significantly outperforming generic guar gum.</p>
+                    <h3>Performance Benchmark</h3>
+                    <p>OHRA activated complex ensures superior viscosity for slope stabilization.</p>
                     <div class="chart-container">
                         <div class="chart-col">
                             <div class="bar bar-competitor"><span>20</span></div><p>Generic</p>
@@ -42,27 +42,26 @@
                             <div class="bar bar-ohra"><span>42</span></div><p style="color:var(--primary); font-weight:700;">OHRA</p>
                         </div>
                     </div>
-                    <p style="font-size:0.8rem; text-align:center;">Swell Volume (ml/g)</p>
                 </div>
                 
                 <div>
-                    <h3>Technical Specifications</h3>
+                    <h3>Certified Specifications</h3>
                     <table class="data-table" style="margin-top:20px;">
-                        <tr><td>Appearance</td><td>Light Green Granular Powder</td></tr>
                         <tr><td>Viscosity (1%)</td><td><strong>3250 cps</strong></td></tr>
                         <tr><td>Swell Volume</td><td><strong>42 ml/g</strong></td></tr>
-                        <tr><td>Packaging</td><td>50 lb (22.7 kg) Bags</td></tr>
-                        <tr><td>Safety</td><td>Biodegradable / Silica-Safe</td></tr>
+                        <tr><td>Mesh Size</td><td>98% Passing 90 Mesh</td></tr>
+                        <tr><td>pH (1% Sol.)</td><td>6.8</td></tr>
+                        <tr><td>Packaging</td><td>50 lb (22.7 kg) Moisture-Resistant Bags</td></tr>
                     </table>
                     <div style="margin-top:20px;">
-                        <a href="TERRA-BOND TDS.pdf" target="_blank" class="btn btn-secondary" style="border:1px solid #ccc; font-size:0.8rem;">Download TDS</a>
-                        <a href="TERRA-BOND SDS.pdf" target="_blank" class="btn btn-secondary" style="border:1px solid #ccc; font-size:0.8rem;">Download SDS</a>
+                        <a href="TERRA-BOND TDS.pdf" target="_blank" class="btn btn-secondary">Download TDS</a>
+                        <a href="TERRA-BOND SDS.pdf" target="_blank" class="btn btn-secondary">Download SDS</a>
                     </div>
                 </div>
             </div>
 
             <div class="calc-section">
-                <h3>🧮 Project Calculator</h3>
+                <h3>🧮 Material Estimator</h3>
                 <div class="calc-flex">
                     <div class="input-group">
                         <label>Slope Condition</label>
@@ -73,15 +72,15 @@
                         </select>
                     </div>
                     <div class="input-group">
-                        <label>Acres</label>
-                        <input type="number" id="acresInput" placeholder="Total Acres">
+                        <label>Total Acres</label>
+                        <input type="number" id="acresInput" placeholder="Enter Acres">
                     </div>
                     <button class="calc-btn" onclick="calculateNeeds()">CALCULATE</button>
                 </div>
                 <div class="calc-result" id="calcResult">
                     <div class="result-box">
-                        <div class="res-item"><strong id="totalLbs">0</strong><span>Lbs Needed</span></div>
-                        <div class="res-item"><strong id="totalBags" style="color:var(--primary)">0</strong><span>Bags</span></div>
+                        <div class="res-item"><strong id="totalLbs">0</strong><span>Total Lbs</span></div>
+                        <div class="res-item"><strong id="totalBags" style="color:var(--primary)">0</strong><span>Bags (50lb)</span></div>
                     </div>
                 </div>
             </div>
@@ -89,8 +88,15 @@
     </section>
 
     <footer>
-        <div class="container">
-            <p>© 2026 OHRA Chem LLP. Surat, India.</p>
+        <div class="container footer-grid">
+            <div>
+                <h3>OHRA CHEM LLP</h3>
+                <p>Advanced Material Science for Global Export.</p>
+            </div>
+            <div>
+                <p>Contact: <a href="mailto:krunal@ohrachem.in">krunal@ohrachem.in</a></p>
+                <p>© 2026 OHRA Chem. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
