@@ -29,6 +29,11 @@ body {
     min-height: 100vh; 
 }
 
+/* --- [FIXED] LINK & LIST RESET --- */
+/* This was missing! It fixes the purple links. */
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
 h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
 
 /* --- GLOBAL CANVAS RULES --- */
