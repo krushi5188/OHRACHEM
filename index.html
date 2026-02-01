@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:title" content="OHRA Chem | TERRA-BOND™ GREEN">
+    <meta property="og:description" content="Premium High-Yield Hydrocolloid Tackifier. Manufactured in Surat, India.">
+    <meta property="og:image" content="logo.jpeg">
+    <meta property="og:url" content="https://www.ohrachem.in">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+
     <title>OHRA Chem | TERRA-BOND™ GREEN</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +26,7 @@
             --bg: #F4F5F0;           /* Cloud White */
             --white: #ffffff;
             --border: rgba(47, 62, 51, 0.15);
+            --whatsapp: #25D366;
         }
 
         /* --- RESET --- */
@@ -256,12 +266,28 @@
             font-weight: 700;
         }
 
+        /* --- FAQ SECTION (NEW) --- */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .faq-item h4 { font-size: 1.1rem; margin-bottom: 10px; color: var(--text); }
+        .faq-item p { font-size: 0.95rem; opacity: 0.8; }
+
         /* --- FOOTER --- */
         footer {
             padding: 60px 0;
             border-top: 1px solid var(--border);
             font-size: 0.9rem;
-            background-color: var(--bg);
+            background-color: var(--white);
         }
         
         .footer-grid {
@@ -275,6 +301,31 @@
         .contact-info p { margin-bottom: 8px; }
         .contact-info strong { color: var(--text); }
         .contact-info a { color: var(--primary); font-weight: 700; }
+
+        /* --- WHATSAPP FLOAT (NEW) --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+        }
 
         /* --- MOBILE --- */
         @media (max-width: 768px) {
@@ -327,10 +378,10 @@
                         TERRA-BOND™ GREEN is a micro-activated Bio-Polymer Complex designed to outperform traditional starch-based binders.
                     </p>
                     <ul style="margin-bottom: 30px; line-height: 2;">
-                        [cite_start]<li>✅ <strong>Zero Clay Fillers:</strong> 100% Active Concentrate [cite: 20]</li>
-                        [cite_start]<li>✅ <strong>Viscosity Lock:</strong> 3250 cps (High Build) [cite: 20]</li>
-                        [cite_start]<li>✅ <strong>Instant Swell:</strong> 42 ml/g Volume [cite: 20]</li>
-                        [cite_start]<li>✅ <strong>Safety:</strong> Biodegradable & Silica-Safe [cite: 43]</li>
+                        <li>✅ <strong>Zero Clay Fillers:</strong> 100% Active Concentrate</li>
+                        <li>✅ <strong>Viscosity Lock:</strong> 3250 cps (High Build)</li>
+                        <li>✅ <strong>Instant Swell:</strong> 42 ml/g Volume</li>
+                        <li>✅ <strong>Safety:</strong> Biodegradable & Silica-Safe</li>
                     </ul>
                     <p style="font-size: 0.8rem; opacity: 0.7;">*Data based on Quality Control Report OH-2601-EXP.</p>
                 </div>
@@ -451,6 +502,26 @@
         </div>
     </section>
 
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom:30px; font-size:1.5rem;">Field Usage & FAQ</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>⚠️ How do I mix it to prevent lumps?</h4>
+                    <p>TERRA-BOND is a high-viscosity binder. You must add the powder <strong>slowly</strong> to agitated water. Do not dump the entire bag at once[cite: 73].</p>
+                </div>
+                <div class="faq-item">
+                    <h4>📦 What is the Shelf Life?</h4>
+                    <p>The product is stable for <strong>3 Years</strong> from the date of manufacture when stored in a cool, dry place[cite: 17].</p>
+                </div>
+                <div class="faq-item">
+                    <h4>🌱 Is it safe for the environment?</h4>
+                    <p>Yes. It is 100% biodegradable, organic, and contains non-hazardous amorphous silica. It is safe for soil microbiomes[cite: 35, 65].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
@@ -469,6 +540,10 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/917777996685?text=Hello%20OHRA%20Chem,%20I%20am%20interested%20in%20Terra-Bond%20Green." class="whatsapp-float" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.884.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.982zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
 
 </body>
 </html>
