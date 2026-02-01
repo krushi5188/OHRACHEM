@@ -10,7 +10,7 @@
     --bg: #F4F5F0;           
     
     --white: #ffffff;
-    --border: rgba(26, 44, 47, 0.15); /* Venusian Structural Border */
+    --border: rgba(26, 44, 47, 0.15); 
     --whatsapp: #25D366;
     --calc-bg: #E0E8E9;
 }
@@ -19,7 +19,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
-    font-family: 'Inter', sans-serif; /* Geometric Sans-Serif */
+    font-family: 'Inter', sans-serif; 
     background-color: var(--bg); 
     color: var(--text); 
     line-height: 1.6; 
@@ -38,7 +38,7 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
 .btn { 
     display: inline-block; 
     padding: 14px 32px; 
-    border-radius: 4px; /* Minimal Radius Only */
+    border-radius: 4px; 
     font-weight: 700; 
     text-transform: uppercase; 
     letter-spacing: 1px; 
@@ -54,7 +54,7 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
 .btn-secondary { background-color: transparent; color: var(--text); margin-left: 10px; }
 .btn-secondary:hover { background-color: var(--text); color: var(--white); }
 
-/* --- HEADER (MARS GROUNDING) --- */
+/* --- HEADER --- */
 header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 100; }
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
@@ -73,7 +73,7 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .bg-white { background-color: var(--white); }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 
-/* --- TABLES (VENUSIAN DISCIPLINE) --- */
+/* --- TABLES --- */
 .data-table { width: 100%; border-collapse: collapse; background: var(--white); }
 .data-table th, .data-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); text-align: left; }
 .data-table th { background-color: var(--text); color: var(--white); font-weight: 600; }
@@ -87,12 +87,12 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .calc-section { background-color: var(--calc-bg); padding: 40px; border-radius: 4px; border: 1px solid var(--text); }
 .input-group select, .input-group input { width: 100%; padding: 12px; border: 1px solid var(--text); border-radius: 4px; }
 
-/* --- FOOTER (VENUS ANCHOR) --- */
+/* --- FOOTER --- */
 footer { padding: 60px 0; background-color: var(--text); color: var(--white); margin-top: auto; }
 footer a { color: var(--primary); font-weight: 700; }
 .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
 
-/* --- WHATSAPP (MERCURY VIBRATION) --- */
+/* --- WHATSAPP --- */
 .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
 
 @media (max-width: 768px) {
