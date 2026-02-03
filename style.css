@@ -61,7 +61,7 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
 .btn-secondary { background-color: transparent; color: var(--text); margin-left: 10px; }
 .btn-secondary:hover { background-color: var(--text); color: var(--white); }
 
-.badge { display: inline-block; background-color: var(--text); color: var(--white); padding: 4px 12px; font-size: 0.7rem; font-weight: 700; border-radius: 50px; margin-bottom: 20px; }
+.badge { display: inline-block; background-color: var(--text); color: var(--bg) !important; padding: 4px 12px; font-size: 0.7rem; font-weight: 700; border-radius: 50px; margin-bottom: 20px; }
 
 /* --- HEADER (Specific Overrides) --- */
 header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 100; }
@@ -110,7 +110,7 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 
 .stat-item { padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
 .stat-item:last-child { border-right: none; }
-.stat-item h3 { font-size: 2rem; color: var(--primary); margin-bottom: 5px; }
+.stat-item h3 { font-size: 2rem; color: var(--bg); margin-bottom: 5px; }
 .stat-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
 
 /* --- TABLES & CHARTS (UPDATED) --- */
