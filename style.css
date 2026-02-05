@@ -1,14 +1,8 @@
 /* --- ASTRO-NUMERICAL TECHNICAL SPECS --- */
 :root {
-    /* MERCURY: Primary Actions & Trade */
     --primary: #3A7D80;      
-    
-    /* VENUS: Structure, Success & Destiny */
     --text: #1A2C2F;          
-    
-    /* MARS: Core Self & Background Stability */
     --bg: #F4F5F0;            
-    
     --white: #ffffff;
     --border: rgba(26, 44, 47, 0.15); 
     --whatsapp: #25D366;
@@ -23,37 +17,24 @@ body {
     background-color: var(--bg); 
     color: var(--text); 
     line-height: 1.6; 
-    -webkit-font-smoothing: antialiased; 
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
 }
 
 /* --- GLOBAL LINK RESET --- */
-a { 
-    text-decoration: none !important; 
-    color: inherit; 
-    transition: 0.3s; 
-}
+a { text-decoration: none !important; color: inherit; transition: 0.3s; }
 ul { list-style: none; }
-
 h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
 
 /* --- GLOBAL CANVAS RULES --- */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* GEOMETRY: Squared corners */
+/* GEOMETRY: Buttons */
 .btn { 
-    display: inline-block; 
-    padding: 14px 32px; 
-    border-radius: 4px; 
-    font-weight: 700; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    font-size: 0.85rem; 
-    cursor: pointer; 
-    border: 2px solid var(--text); 
-    transition: 0.3s;
+    display: inline-block; padding: 14px 32px; border-radius: 4px; 
+    font-weight: 700; text-transform: uppercase; letter-spacing: 1px; 
+    font-size: 0.85rem; cursor: pointer; border: 2px solid var(--text); transition: 0.3s;
 }
 .btn-primary { background-color: var(--primary); color: var(--white); border-color: var(--primary); }
 .btn-primary:hover { background-color: var(--text); color: var(--white); border-color: var(--text); }
@@ -68,30 +49,22 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
 
 /* LOGO */
-.logo { 
-    font-size: 1.5rem; 
-    font-weight: 800; 
-    letter-spacing: -0.5px; 
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
-    color: var(--text) !important; 
-}
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; color: var(--text) !important; }
 .logo img { height: 45px; width: auto; } 
 
-/* NAV LINKS */
+/* NAV LINKS (Desktop) */
 .nav-links { display: flex; gap: 30px; font-weight: 600; font-size: 0.9rem; }
 .nav-links a { color: var(--text) !important; }
 .nav-links a:hover { color: var(--primary) !important; }
 .active { border-bottom: 2px solid var(--primary); }
 
-/* --- HERO --- */
+/* MENU BUTTON (Hidden on Desktop) */
+.menu-btn { display: none; }
+
+/* --- SECTIONS & CARDS --- */
 .hero { padding: 100px 0; flex: 1; display: flex; align-items: center; }
 .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
 .hero span { color: var(--primary); }
-.hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 40px; }
-
-/* --- SECTIONS --- */
 .section-pad { padding: 80px 0; }
 .bg-white { background-color: var(--white); }
 .bg-dark { background-color: var(--text); color: var(--white); }
@@ -101,73 +74,78 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
 
-/* --- CARDS & ICONS --- */
 .card { padding: 30px; background-color: var(--bg); border: 1px solid var(--border); border-radius: 4px; transition: 0.3s; }
 .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-
-/* NEW SVG ICON RULE */
-.card-icon svg {
-    width: 48px;
-    height: 48px;
-    fill: var(--primary);
-    margin-bottom: 15px;
-}
-.card h3 { font-size: 1.2rem; margin-bottom: 10px; }
-.card p { font-size: 0.9rem; opacity: 0.8; }
+.card-icon svg { width: 48px; height: 48px; fill: var(--primary); margin-bottom: 15px; }
 
 .stat-item { padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
 .stat-item:last-child { border-right: none; }
 .stat-item h3 { font-size: 2rem; color: var(--bg); margin-bottom: 5px; }
 .stat-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
 
-/* --- CALCULATOR & INPUTS --- */
 .calc-section { background-color: var(--calc-bg); padding: 40px; border-radius: 4px; border: 1px solid var(--text); }
 .input-group select, .input-group input { width: 100%; padding: 12px; border: 1px solid var(--text); border-radius: 4px; }
 
-/* --- FOOTER & WHATSAPP --- */
 footer { padding: 60px 0; background-color: var(--text); color: var(--white); margin-top: auto; }
-footer a { color: var(--primary); font-weight: 700; }
 .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
-
 .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
 
-/* --- MOBILE RESPONSIVE FIXES --- */
+/* --- MOBILE RESPONSIVE (RETRACTABLE MENU) --- */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .grid-2 { grid-template-columns: 1fr; }
     .grid-4 { grid-template-columns: 1fr 1fr; }
     .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
-    /* MOBILE NAV STACKING */
-    .nav-flex {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    /* 1. Header Layout */
+    .nav-flex { 
+        flex-wrap: wrap; /* Allows menu to drop down */
+        gap: 10px;
     }
+
+    /* 2. Menu Button (Visible on Mobile) */
+    .menu-btn {
+        display: block;
+        background: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        padding: 8px 16px;
+        font-weight: 700;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* 3. The Menu List (Hidden by default) */
     .nav-links {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 0;
+        display: none; /* HIDDEN */
         width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
     }
-    .nav-links li { width: 100%; display: flex; justify-content: center; }
+
+    /* 4. The Menu List (Visible when 'active') */
+    .nav-links.active {
+        display: flex; /* SHOWN */
+    }
+
+    /* 5. Menu Items (Full Width Boxes) */
+    .nav-links li { width: 100%; }
     .nav-links li a {
         display: block;
-        padding: 12px 0;
-        font-size: 1rem;
-        background-color: var(--white);
-        width: 80%;
+        width: 100%;
         text-align: center;
+        padding: 15px;
+        background: var(--white);
+        border: 1px solid var(--border);
         border-radius: 4px;
         color: var(--text) !important;
-        border: 1px solid var(--border);
     }
-    .active {
+    
+    /* 6. Active Link Color */
+    .nav-links li a.active {
         background-color: var(--primary) !important;
-        color: var(--white) !important;
+        color: #fff !important;
         border-color: var(--primary);
     }
-    .logo { margin-bottom: 5px; }
 }
