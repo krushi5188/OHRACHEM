@@ -4,10 +4,10 @@
     --primary: #3A7D80;      
     
     /* VENUS: Structure, Success & Destiny */
-    --text: #1A2C2F;         
+    --text: #1A2C2F;          
     
     /* MARS: Core Self & Background Stability */
-    --bg: #F4F5F0;           
+    --bg: #F4F5F0;            
     
     --white: #ffffff;
     --border: rgba(26, 44, 47, 0.15); 
@@ -151,10 +151,52 @@ footer a { color: var(--primary); font-weight: 700; }
 
 .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
 
+/* --- MOBILE RESPONSIVE FIXES (UPDATED) --- */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .grid-2 { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
     .grid-4 { grid-template-columns: 1fr 1fr; }
     .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+    /* --- MOBILE NAV STACKING --- */
+    /* 1. Stack Logo and Menu */
+    .nav-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    /* 2. Enable menu, stack vertical, center it */
+    .nav-links {
+        display: flex !important; /* Forces the menu to show */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* 3. Style links as tappable buttons */
+    .nav-links li { width: 100%; display: flex; justify-content: center; }
+    
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 1rem;
+        background-color: var(--white); /* White button for contrast */
+        width: 80%; /* Easy to reach with thumbs */
+        text-align: center;
+        border-radius: 4px;
+        color: var(--text) !important;
+        border: 1px solid var(--border);
+    }
+    
+    /* 4. Active state for mobile buttons */
+    .active {
+        background-color: var(--primary) !important;
+        color: var(--white) !important;
+        border-color: var(--primary);
+    }
+
+    .logo { margin-bottom: 5px; }
 }
