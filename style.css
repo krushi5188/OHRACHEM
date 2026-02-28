@@ -1,8 +1,11 @@
 /* --- ASTRO-NUMERICAL TECHNICAL SPECS --- */
 :root {
     --primary: #3A7D80;      
-    --text: #1A2C2F;          
-    --bg: #F4F5F0;            
+    /* VENUS: Structure, Success & Destiny */
+    --text: #1A2C2F;
+    
+    /* MARS: Core Self & Background Stability */
+    --bg: #F4F5F0;
     --white: #ffffff;
     --border: rgba(26, 44, 47, 0.15); 
     --whatsapp: #25D366;
@@ -32,8 +35,8 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
 
 /* GEOMETRY: Buttons */
 .btn { 
-    display: inline-block; padding: 14px 32px; border-radius: 4px; 
-    font-weight: 700; text-transform: uppercase; letter-spacing: 1px; 
+    display: inline-block; padding: 14px 32px; border-radius: 4px;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
     font-size: 0.85rem; cursor: pointer; border: 2px solid var(--text); transition: 0.3s;
 }
 .btn-primary { background-color: var(--primary); color: var(--white); border-color: var(--primary); }
@@ -83,6 +86,33 @@ header { background-color: var(--bg); padding: 20px 0; border-bottom: 2px solid 
 .stat-item h3 { font-size: 2rem; color: var(--bg); margin-bottom: 5px; }
 .stat-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
 
+/* --- TABLES & CHARTS (UPDATED) --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg); /* CHANGED: Matches background color now */
+}
+.data-table th, .data-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); text-align: left; }
+.data-table th { background-color: var(--text); color: var(--white); font-weight: 600; }
+
+.chart-container { display: flex; align-items: flex-end; gap: 40px; margin-top: 40px; height: 300px; border-bottom: 2px solid var(--text); }
+
+/* UPDATED BAR STYLING */
+.bar {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    /* Centering text inside the bar */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15px;
+    color: var(--bg); /* Cloud White text color */
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.bar-ohra { height: 280px; background-color: var(--primary); }
+.bar-competitor { height: 140px; background-color: #ccc; }
 .calc-section { background-color: var(--calc-bg); padding: 40px; border-radius: 4px; border: 1px solid var(--text); }
 .input-group select, .input-group input { width: 100%; padding: 12px; border: 1px solid var(--text); border-radius: 4px; }
 
@@ -98,7 +128,7 @@ footer { padding: 60px 0; background-color: var(--text); color: var(--white); ma
     .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
     /* 1. Header Layout */
-    .nav-flex { 
+    .nav-flex {
         flex-wrap: wrap; /* Allows menu to drop down */
         gap: 10px;
     }
@@ -141,7 +171,7 @@ footer { padding: 60px 0; background-color: var(--text); color: var(--white); ma
         border-radius: 4px;
         color: var(--text) !important;
     }
-    
+
     /* 6. Active Link Color */
     .nav-links li a.active {
         background-color: var(--primary) !important;
